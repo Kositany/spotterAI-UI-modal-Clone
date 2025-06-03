@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spotter || Sample Modal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://unpkg.com/css-doodle@0.34.7/css-doodle.min.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-container">
+        <header>
+            <div class="container-header">
+                <div class="logo">
+                    <div class="hamburger" id="hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <img src="image assets/dots.svg" alt="logo">
+                    <img src="image assets/spotter logo.svg" alt="text-logo" class="logo-text">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Use Cases</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Demo</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#"><i class="fa-regular fa-user"></i>Login</a>
+                    <a href="#" class="btn-primary">Contact Sales</a>
+                    <a href="#" class="btn-secondary">Get Started</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="modal-grid">
+            <!-- Left side: Large item -->
+            <div class="modal-item large">
+                <div class="texts">
+                    <p>Why Spotter <span class="fade-in-out">_</span></p>
+                    <h2>The internet's most <span style="color: var(--accent-alt);">accurate</span> visitor identifier
+                    </h2>
+                    <p>Industry-leading accuracy that lasts for months or years, even when cookies are cleared.</p>
+                    <button class="btn-secondary">Learn More</button>
+                </div>
+                <div class="graph">
+                    <div class="chart-container">
+                        <div class="chart">
+                            <svg id="accuracyChart" viewBox="0 0 900 500"></svg>
+                            <div class="tooltip"></div>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item" id="spotterLegend">
+                                <div class="legend-color spotter-legend"></div>
+                                <span class="legend-text">Spotter</span>
+                            </div>
+                            <div class="legend-item" id="othersLegend">
+                                <div class="legend-color others-legend"></div>
+                                <span class="legend-text">Others</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right side: small/middle items wrapped -->
+            <div class="right-column">
+                <div class="modal-item-small">
+                    <div class="image-and-text">
+                        <div class="image">
+                            <img src="image assets/search icon.svg" alt="search-icon">
+                        </div>
+                        <div class="text-content">
+                            <h3>Any browser, any device.</h3>
+                            <p>Identify returning visitors across all platforms with accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-item-middle">
+                    <div class="doodle-background || magnify-area">
+                        <css-doodle class="doodle">
+                            :doodle {
+                            @grid: 30 / 20em;
+                            }
+
+                            background: rgba(255, 255, 255, 0.15);
+                            transform: scale(@rand(.2, .34));
+                            transition: background 0.3s ease;
+
+                            @hover {
+                            background: @pick(var(--accent));
+                            }
+                        </css-doodle>
+                        <div class="magnifier"></div>
+                    </div>
+                    <div class="image-and-text">
+                        <div class="image">
+                            <img src="image assets/percent icon.svg" alt="search-icon">
+                        </div>
+                        <div class="text-content">
+                            <h3>Delight your trusted users.</h3>
+                            <p>Personalize UX and reduce 2FA/OTP with persistent identification.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-item-small">
+                    <div class="image-and-text">
+                        <div class="image">
+                            <img src="image assets/percent icon.svg" alt="search-icon">
+                        </div>
+                        <div class="text-content">
+                            <h3>Delight your trusted users.</h3>
+                            <p>Personalize UX and reduce 2FA/OTP with persistent identification.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="main.js"></script>
+</body>
+
+</html>
